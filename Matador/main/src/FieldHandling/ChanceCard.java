@@ -9,6 +9,16 @@ public class ChanceCard {
     }
 
     protected String nameOfCard;
+
+    @Override
+    public String toString() {
+        return "ChanceCard{" +
+                "nameOfCard='" + nameOfCard + '\'' +
+                ", cardDescription='" + cardDescription + '\'' +
+                ", effectOnPlayer=" + effectOnPlayer +
+                '}';
+    }
+
     protected String cardDescription;
     protected int effectOnPlayer;
 
@@ -16,23 +26,11 @@ public class ChanceCard {
         return nameOfCard;
     }
 
-    public void setNameOfCard(String nameOfCard) {
-        this.nameOfCard = nameOfCard;
-    }
-
     public String getCardDescription() {
         return cardDescription;
     }
 
-    public void setCardDescription(String cardDescription) {
-        this.cardDescription = cardDescription;
-    }
-
     public int getEffectOnPlayer() {
         return effectOnPlayer;
-    }
-
-    public void setEffectOnPlayer(int effectOnPlayer) {
-        this.effectOnPlayer = effectOnPlayer;
     }
 }

@@ -9,7 +9,7 @@ class CardDeckTest {
 @Test
     void testReader(){
     CardDeck cardDeck = new CardDeck();
-    cardDeck.cardDeckFiller();
+    System.out.println(cardDeck.toString());
 
     }
 
