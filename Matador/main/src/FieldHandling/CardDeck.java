@@ -1,40 +1,40 @@
 package FieldHandling;
-import java.util.Arrays;
-import java.util.Random;
 
 import TextReader.TextFileReader;
+
+import java.util.Arrays;
+import java.util.Random;
 
 
 public class CardDeck {
 
     private ChanceCard[] cardDeck;
 
-    public CardDeck() {
-        this.cardDeck = cardDeckFiller();
-        cardShuffler();
-    }
+   public CardDeck(){
+       this.cardDeck;
+
+   }
 
     protected ChanceCard[] cardDeckFiller() {
-        TextFileReader reader = new TextFileReader("ChanceCardText.txt",25);
+        TextFileReader reader = new TextFileReader("ChanceCardText.txt", 25);
         String[] cardsText = reader.fileReader();
-        int amoutOfUnuseableText=0;
+        int amoutOfUnuseableText = 0;
         for (String s : cardsText) {
             if (s.startsWith("Card")) {
                 amoutOfUnuseableText++;
             }
         }
-        ChanceCard[] cards = new ChanceCard[cardsText.length-amoutOfUnuseableText];
-        for(int i =0, a=0; i<cards.length;i++,a++){
-            if(cardsText[i].startsWith("Card")) {
+        ChanceCard[] cards = new ChanceCard[cardsText.length - amoutOfUnuseableText];
+        for (int i = 0, a = 0; i < cards.length; i++, a++) {
+            if (cardsText[i].startsWith("Card")) {
                 a++;
             }
-            cards[i]= new ChanceCard(cardsText[a],cardsText[a+1],i);
+            cards[i] = new ChanceCard(cardsText[a], cardsText[a + 1], i);
 
         }
 
 
-
-    return cards;
+        return cards;
     }
 
     @Override
@@ -44,14 +44,14 @@ public class CardDeck {
                 '}';
     }
 
-    protected void cardShuffler(){
+    protected void cardShuffler() {
         Random rand = new Random();
         ChanceCard temp;
-        for(int i = 0;i<cardDeck.length;i++){
+        for (int i = 0; i < cardDeck.length; i++) {
             int randomIndexSwap = rand.nextInt(cardDeck.length);
             temp = this.cardDeck[randomIndexSwap];
-            this.cardDeck[randomIndexSwap]=this.cardDeck[i];
-            this.cardDeck[i]=temp;
+            this.cardDeck[randomIndexSwap] = this.cardDeck[i];
+            this.cardDeck[i] = temp;
 
         }
 

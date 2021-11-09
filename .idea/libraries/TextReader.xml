@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="TextReader">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../TextReader/out/artifacts/TextReader_jar/TextReader.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
