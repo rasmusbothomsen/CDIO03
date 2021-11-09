@@ -1,5 +1,6 @@
 package FieldHandling;
 
+
 public class ChanceCard {
     public ChanceCard(String nameOfCard, String cardDescription, int effectOnPlayer) {
         this.nameOfCard = nameOfCard;

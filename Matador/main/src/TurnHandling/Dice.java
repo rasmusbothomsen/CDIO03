@@ -11,10 +11,9 @@ public class Dice {
     public Dice(int faceValue){
         this.faceValue=faceValue;
     }
-    public int[] getDice() {
+    public int getDice() {
         int dice1 = dice.nextInt(faceValue)+1;
-        int dice2 = dice.nextInt(faceValue)+1;
-        return new int[]{dice1,dice2};
+        return dice1;
     }
 
 }
