@@ -1,4 +1,4 @@
-package Controllers;
+package TurnHandling;
 
 public class Player {
         private final String name;
