@@ -1,11 +1,16 @@
 package TurnHandling;
 
+
 public class playTurn {
-private boolean isBroke;
-private diceRoller DiceRoller;
+
+    private boolean isbroke;
+
+private boolean getisBroke(){
+    return this.isbroke;
+}
 
 
-
+private DiceRoller diceRoller;
 }
 
 
