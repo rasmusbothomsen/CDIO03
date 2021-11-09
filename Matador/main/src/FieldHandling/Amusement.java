@@ -1,6 +1,6 @@
 package FieldHandling;
 
-import Controllers.Player;
+import TurnHandling.Player;
 
 public class Amusement {
     protected int placeMentOnBoard;
