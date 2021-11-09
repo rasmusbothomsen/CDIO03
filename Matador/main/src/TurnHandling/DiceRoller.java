@@ -1,5 +1,4 @@
 package TurnHandling;
-
 public class DiceRoller {
     private Dice dice;
 

@@ -11,7 +11,8 @@ public class CardDeck {
     private ChanceCard[] cardDeck;
 
    public CardDeck(){
-       this.cardDeck;
+       cardDeck=cardDeckFiller();
+
 
    }
 
@@ -49,9 +50,9 @@ public class CardDeck {
         ChanceCard temp;
         for (int i = 0; i < cardDeck.length; i++) {
             int randomIndexSwap = rand.nextInt(cardDeck.length);
-            temp = this.cardDeck[randomIndexSwap];
-            this.cardDeck[randomIndexSwap] = this.cardDeck[i];
-            this.cardDeck[i] = temp;
+            temp = cardDeck[randomIndexSwap];
+            cardDeck[randomIndexSwap] = cardDeck[i];
+            cardDeck[i] = temp;
 
         }
 
