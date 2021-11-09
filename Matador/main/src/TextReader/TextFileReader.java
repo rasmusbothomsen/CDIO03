@@ -1,13 +1,13 @@
 package TextReader;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
 public class TextFileReader {
     public TextFileReader(String fileName, int arrayLenght) {
-        this.fileName = fileName;
+        this.fileName = "Matador/main/TextFiles/"+fileName;
         this.arrayLenght=arrayLenght;
+
     }
 
     private String fileName;
@@ -17,7 +17,7 @@ private String[] fileReaderPriv() throws IOException {
     BufferedReader reader = new BufferedReader(new FileReader(fileName));
     String currentline=reader.readLine();
     String[] allText= new String[arrayLenght];
-    for(int i =0; currentline!=null||i<arrayLenght;i++){
+    for(int i =0; currentline!=null&&i<allText.length;i++){
         allText[i]=currentline;
         currentline=reader.readLine();
     }

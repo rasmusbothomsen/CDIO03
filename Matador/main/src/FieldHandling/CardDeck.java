@@ -1,9 +1,7 @@
 package FieldHandling;
 
 import TextReader.TextFileReader;
-import org.w3c.dom.Text;
 
-import java.io.IOException;
 
 public class CardDeck {
 
@@ -11,9 +9,10 @@ public class CardDeck {
 
 
 
-    private ChanceCard[] cardDeckFiller() {
+    protected ChanceCard[] cardDeckFiller() {
         TextFileReader reader = new TextFileReader("ChanceCardText.txt",25);
         String[] cards = reader.fileReader();
+        System.out.println(cards[3]);
 
 
 
