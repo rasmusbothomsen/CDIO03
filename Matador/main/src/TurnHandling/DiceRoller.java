@@ -1,4 +1,5 @@
 package TurnHandling;
+import Objects.Dice;
 public class DiceRoller {
     private Dice dice;
 
