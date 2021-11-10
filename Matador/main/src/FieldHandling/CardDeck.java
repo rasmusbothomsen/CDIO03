@@ -9,15 +9,29 @@ import java.util.Random;
 public class CardDeck {
 
     private ChanceCard[] cardDeck;
+    private int whereInDeck;
 
-   public CardDeck(){
+    public ChanceCard pullCard() {
+        ChanceCard tempCard = cardDeck[whereInDeck-1];
+        whereInDeck++;
+        return tempCard;
+    }
+    private void checkWhereInDeck(){
+        if(whereInDeck==cardDeck.length){
+            cardShuffler();
+            whereInDeck=1;
+        }
+    }
+
+    public CardDeck(){
+        this.whereInDeck = 1;
        this.cardDeck=cardDeckFiller();
        cardShuffler();
 
 
    }
 
-    protected ChanceCard[] cardDeckFiller() {
+    private ChanceCard[] cardDeckFiller() {
         TextFileReader reader = new TextFileReader("ChanceCardText.txt");
         String[] cardsText = reader.fileReader();
         int amoutOfUnuseableText = 0;
@@ -46,7 +60,7 @@ public class CardDeck {
                 '}';
     }
 
-    protected void cardShuffler() {
+    private void cardShuffler() {
         Random rand = new Random();
         ChanceCard temp;
         for (int i = 0; i < cardDeck.length; i++) {

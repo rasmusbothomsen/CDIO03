@@ -4,9 +4,9 @@ import TurnHandling.Player;
 
 public class EffectFromChanceCardHandler {
     private Player player;
-    public String[] applyEffectFromCard(Player player, int effectFromCard){
+    public String[] applyEffectFromCard(Player player, ChanceCard card){
         this.player=player;
-        switch (effectFromCard){
+        switch (card.effectOnPlayer){
             case 0:
                 effectOne();
                 break;
@@ -42,7 +42,7 @@ public class EffectFromChanceCardHandler {
                 break;
 
             default:
-                throw new IllegalStateException("Unexpected value: " + effectFromCard);
+                throw new IllegalStateException("Unexpected value: ");
         }
         return null;
 

@@ -5,10 +5,12 @@ import TurnHandling.Player;
 public class FieldHandler {
     private CardDeck cardDeck;
     private Board board;
+    private EffectFromChanceCardHandler chanceCardHandler;
 
     public FieldHandler() {
         this.cardDeck = new CardDeck();
         this.board = new Board();
+        this.chanceCardHandler=new EffectFromChanceCardHandler();
     }
     public void initiateField(Player player){
         Object[] fields = board.getFields();
@@ -43,13 +45,21 @@ public class FieldHandler {
        }
     }
     private void isChance(Player player, Object[] fields){
+        Chance chanceField = (Chance)fields[player.getPlacementONBoard()];
+        chanceCardHandler.applyEffectFromCard(player, cardDeck.pullCard());
 
     }
     private void isRestroom(Player player, Object[] fields){
-
+        RestRoom field = (RestRoom) fields[player.getPlacementONBoard()];
+        if(field.isGoTo()){
+            player.setPlacementONBoard(18);
+            player.addMoney(-3);
+            //Mangler resten af denne metode
+        }
     }
     private void isField(Player player,Object[] fields){
-
+        Field field = (Amusement)fields[player.getPlacementONBoard()];
+        //Mangler resten af denne her
     }
 
 }
