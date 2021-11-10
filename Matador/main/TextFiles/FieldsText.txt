@@ -2,4 +2,26 @@ Field 1: First Line = Name, Second = Description
 Start
 Start
 Field 2
+Burgerbaren
+Du har landet på Burgerbaren!
+Field 3
+Pizzeriaet
+Du har besøgt pizzeriaet
+Field 4
+Chance
+Du er landet på Chancen, træk nu et tilfældigt kort.
+Field 5
+Slikbutikken
+Du har været i slikbutikken!
+Field 6
+Iskiosken
+Du er taget i iskiosen.
+Field 7
+Fængsel
+Du er på besøg i fængsel!
+Field 8
+Museum
+Du er taget på museum for at lære lidt om historien!
+Field 9
+Biblioteket
 
