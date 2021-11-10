@@ -8,15 +8,26 @@ public class Board {
 
     @Override
     public String toString() {
-        String boardDiscription="Fied  1: \t";
+        StringBuilder boardDiscription= new StringBuilder("Fied  1: \t");
         for(int i =0;i<this.fields.length;i++){
-            boardDiscription+=((Field)this.fields[i]).getFieldName();
+            boardDiscription.append(((Field) this.fields[i]).getFieldName());
             if(i<this.fields.length-1) {
-                boardDiscription += "\nField " + (i + 2) + ":\t";
+                boardDiscription.append("\nField ").append(i + 2).append(":\t");
             }
         }
 
-        return boardDiscription;
+        return boardDiscription.toString();
+    }
+    protected String toClasses(){
+        StringBuilder boardDiscription= new StringBuilder("Fied  1: \t");
+        for(int i =0;i<this.fields.length;i++){
+            boardDiscription.append(this.fields[i].getClass());
+            if(i<this.fields.length-1) {
+                boardDiscription.append("\nField ").append(i + 2).append(":\t");
+            }
+        }
+
+        return boardDiscription.toString();
     }
 
     public Board() {
@@ -26,13 +37,22 @@ public class Board {
         this.fields=new Field[24];
         TextFileReader reader = new TextFileReader("FieldsText.txt");
         String[] readFiles = reader.fileReader();
-        for(int i =0,a=0,b=0; i<readFiles.length;i++){
+        for(int i =0,a=0; i<readFiles.length&&a<fields.length;i++){
             if(readFiles[i].startsWith("Amusement")){
                 ifAmusementToArray(a,readFiles,i+1);
                 a++;
             }
             if(readFiles[i].startsWith("Field")){
                 ifFieldToArray(a,readFiles,i+1);
+                a++;
+            }
+            if(readFiles[i].startsWith("Chance")){
+                ifChanceToArray(a,readFiles,i+1);
+                a++;
+                i++;
+            }
+            if(readFiles[i].startsWith("Restroom")){
+                ifRestroom(a,readFiles,i+1,readFiles[i+1].equals("goTo"));
                 a++;
             }
 
@@ -45,6 +65,16 @@ public class Board {
     private void ifFieldToArray(int arrayToFill,String[] readFiles,int placementRead ) {
         this.fields[arrayToFill]= new Field(readFiles[placementRead],readFiles[placementRead+1],placementRead);
 
+    }
+    private void ifChanceToArray(int arrayToFill,String[] readFiles,int placementRead){
+        this.fields[arrayToFill]= new Chance(readFiles[placementRead],readFiles[placementRead+1],placementRead);
+    }
+    private void ifRestroom(int arrayToFill,String[] readFiles,int placementRead,boolean goTo){
+        if(goTo){
+            this.fields[arrayToFill]= new RestRoom(readFiles[placementRead+1],readFiles[placementRead+2],placementRead, true);
+        }else {
+            this.fields[arrayToFill] = new RestRoom(readFiles[placementRead], readFiles[placementRead + 1], placementRead, false);
+        }
     }
 
     public Object[] getFields() {

@@ -8,7 +8,8 @@ class BoardTest {
     void testIfBoardArrayIsCorrect(){
         Board board = new Board();
         Object[] fieldsTest = board.getFields();
-        System.out.println(fieldsTest[2].getClass());
+        System.out.println(board);
+        System.out.println(board.toClasses());
     }
 @Test
     void testAbstract(){

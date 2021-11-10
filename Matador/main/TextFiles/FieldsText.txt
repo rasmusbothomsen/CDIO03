@@ -9,7 +9,7 @@ Amusement 3
 Pizzeriaet
 Du har besøgt pizzeriaet
 1
-Field 4
+Chance 4
 Chance
 Du er landet på Chancen, træk nu et tilfældigt kort.
 Amusement 5
@@ -20,7 +20,7 @@ Amusement 6
 Iskiosken
 Du er taget i iskiosen.
 1
-Field 7
+Restroom 7
 Fængsel
 Du er på besøg i fængsel!
 Amusement 8
@@ -31,7 +31,7 @@ Amusement 9
 Biblioteket
 Temp Disc
 2
-Field 10
+Chance 10
 Chance
 Du er landet på Chancen, træk nu et tilfældigt kort.
 Amusement 11
@@ -52,7 +52,7 @@ Amusement 15
 Biografen
 temp disc
 3
-Field 16
+Chance 16
 Chancen
 Du er landet på Chancen, træk nu et tilfældigt kort.
 Amusement 17
@@ -63,7 +63,8 @@ Amusement 18
 Dyrehandlen
 Temp disc
 3
-Field 19
+Restroom 19
+goTo //dont touch
 Gå i fængsel
 temp disc
 Amusement 20
@@ -74,7 +75,7 @@ Amusement 21
 zoo
 temp disc
 4
-Field 22
+Chance 22
 Chance
 Du er landet på Chancen, træk nu et tilfældigt kort.
 Amusement 22

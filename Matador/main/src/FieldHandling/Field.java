@@ -95,3 +95,19 @@ class Amusement extends Field {
     }
 
 }
+
+class RestRoom extends Field{
+    private boolean goTo;
+
+    public RestRoom(String fieldName, String fieldDiscription, int placementOnBoard, boolean goTo) {
+        super(fieldName, fieldDiscription, placementOnBoard);
+        this.goTo=goTo;
+    }
+}
+
+class Chance extends Field{
+
+    public Chance(String fieldName, String fieldDiscription, int placementOnBoard) {
+        super(fieldName, fieldDiscription, placementOnBoard);
+    }
+}
