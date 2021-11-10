@@ -39,18 +39,24 @@ class Chance extends Field{
 class Amusement extends Field{
     private int cost;
     private Player playerwhoOwnsIt;
-    private Amusement sameType;
     private boolean isOwned;
     private boolean allIsOwned;
 
+    public void setSameType(Amusement sameType) {
+        this.sameType = sameType;
+    }
+
+    private Amusement sameType;
+
     public Amusement(String fieldName, String fieldDiscription, int placementOnBoard,
-                     int cost, Amusement sameType, boolean isOwned, boolean allIsOwned ) {
+                     int cost, boolean isOwned, boolean allIsOwned ) {
         super(fieldName, fieldDiscription, placementOnBoard);
         this.cost = cost;
-        this.sameType = sameType;
         this.isOwned = isOwned;
         this.allIsOwned = allIsOwned;
     }
+
+
 
     public int getCost() {
         return cost;

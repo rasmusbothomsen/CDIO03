@@ -1,27 +1,84 @@
-Field 1: First Line = Name, Second = Description
+Field 1: First Line = Name, Second = Description, Third line = Amusement price
 Start
 Start
-Field 2
+Amusement 2
 Burgerbaren
 Du har landet på Burgerbaren!
-Field 3
+1
+Amusement 3
 Pizzeriaet
 Du har besøgt pizzeriaet
+1
 Field 4
 Chance
 Du er landet på Chancen, træk nu et tilfældigt kort.
-Field 5
+Amusement 5
 Slikbutikken
 Du har været i slikbutikken!
-Field 6
+1
+Amusement 6
 Iskiosken
 Du er taget i iskiosen.
+1
 Field 7
 Fængsel
 Du er på besøg i fængsel!
-Field 8
+Amusement 8
 Museum
 Du er taget på museum for at lære lidt om historien!
-Field 9
+2
+Amusement 9
 Biblioteket
-
+Temp Disc
+2
+Field 10
+Chance
+Du er landet på Chancen, træk nu et tilfældigt kort.
+Amusement 11
+Skaterparken
+Temp disc
+2
+Amusement 12
+Svømmingpoolen
+temp disc
+2
+Field 13
+Gratis parkering
+Amusement 14
+Spillehallen
+temp disc
+3
+Amusement 15
+Biografen
+temp disc
+3
+Field 16
+Chancen
+Du er landet på Chancen, træk nu et tilfældigt kort.
+Amusement 17
+Legetøjsbutikken
+temp disc
+3
+Amusement 18
+Dyrehandlen
+Temp disc
+3
+Field 19
+Gå i fængsel
+temp disc
+Amusement 20
+bowlinghallen
+temp disc
+4
+Amusement 21
+zoo
+temp disc
+4
+Amusement 22
+Vandlandet
+temp disc
+5
+Amusement 23
+strandpromaden
+temp disc
+5

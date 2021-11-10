@@ -18,7 +18,7 @@ public class CardDeck {
    }
 
     protected ChanceCard[] cardDeckFiller() {
-        TextFileReader reader = new TextFileReader("ChanceCardText.txt", 25);
+        TextFileReader reader = new TextFileReader("ChanceCardText.txt");
         String[] cardsText = reader.fileReader();
         int amoutOfUnuseableText = 0;
         for (String s : cardsText) {
