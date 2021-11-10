@@ -43,6 +43,15 @@ class Amusement extends Field{
     private boolean isOwned;
     private boolean allIsOwned;
 
+    public Amusement(String fieldName, String fieldDiscription, int placementOnBoard,
+                     int cost, Amusement sameType, boolean isOwned, boolean allIsOwned ) {
+        super(fieldName, fieldDiscription, placementOnBoard);
+        this.cost = cost;
+        this.sameType = sameType;
+        this.isOwned = isOwned;
+        this.allIsOwned = allIsOwned;
+    }
+
     public int getCost() {
         return cost;
     }
@@ -65,15 +74,6 @@ class Amusement extends Field{
 
     public boolean isAllIsOwned() {
         return allIsOwned;
-    }
-
-    public Amusement(String fieldName, String fieldDiscription, int placementOnBoard,
-                     int cost, Amusement sameType, boolean isOwned, boolean allIsOwned ) {
-        super(fieldName, fieldDiscription, placementOnBoard);
-        this.cost = cost;
-        this.sameType = sameType;
-        this.isOwned = isOwned;
-        this.allIsOwned = allIsOwned;
     }
 
 
