@@ -2,13 +2,15 @@ package FieldHandling;
 
 
 public class ChanceCard {
+    protected String nameOfCard;
+    protected String cardDescription;
+    protected int effectOnPlayer;
+
     public ChanceCard(String nameOfCard, String cardDescription, int effectOnPlayer) {
         this.nameOfCard = nameOfCard;
         this.cardDescription = cardDescription;
         this.effectOnPlayer = effectOnPlayer;
     }
-
-    protected String nameOfCard;
 
     @Override
     public String toString() {
@@ -18,9 +20,6 @@ public class ChanceCard {
                 ", effectOnPlayer=" + effectOnPlayer +
                 '}';
     }
-
-    protected String cardDescription;
-    protected int effectOnPlayer;
 
     public String getNameOfCard() {
         return nameOfCard;

@@ -11,36 +11,37 @@ public class CardDeck {
     private ChanceCard[] cardDeck;
     private int whereInDeck;
 
+    public CardDeck(){
+        this.whereInDeck = 0;
+        this.cardDeck=cardDeckFiller();
+        cardShuffler();
+
+
+    }
     public ChanceCard pullCard() {
-        ChanceCard tempCard = cardDeck[whereInDeck-1];
+        ChanceCard tempCard = cardDeck[whereInDeck];
         whereInDeck++;
+        checkWhereInDeck();
         return tempCard;
     }
+
     private void checkWhereInDeck(){
-        if(whereInDeck==cardDeck.length){
+        if(whereInDeck==cardDeck.length-1){
             cardShuffler();
-            whereInDeck=1;
+            whereInDeck=0;
         }
     }
-
-    public CardDeck(){
-        this.whereInDeck = 1;
-       this.cardDeck=cardDeckFiller();
-       cardShuffler();
-
-
-   }
 
     private ChanceCard[] cardDeckFiller() {
         TextFileReader reader = new TextFileReader("ChanceCardText.txt");
         String[] cardsText = reader.fileReader();
-        int amoutOfUnuseableText = 0;
+        int amoutOfUseableText = 0;
         for (String s : cardsText) {
             if (s.startsWith("Card")) {
-                amoutOfUnuseableText++;
+                amoutOfUseableText++;
             }
         }
-        ChanceCard[] cards = new ChanceCard[cardsText.length - amoutOfUnuseableText];
+        ChanceCard[] cards = new ChanceCard[amoutOfUseableText];
         for (int i = 0, a = 0; i < cards.length; i++, a++) {
             if (cardsText[i].startsWith("Card")) {
                 a++;

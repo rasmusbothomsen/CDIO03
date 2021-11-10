@@ -64,7 +64,7 @@ Dyrehandlen
 Temp disc
 3
 Restroom 19
-goTo //dont touch
+goTo // dont touch
 Gå i fængsel
 temp disc
 Amusement 20

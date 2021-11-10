@@ -1,6 +1,7 @@
 package FieldHandling;
 
 
+import TurnHandling.Player;
 import org.junit.jupiter.api.Test;
 
 class BoardTest {
@@ -9,8 +10,6 @@ class BoardTest {
         Board board = new Board();
         Object[] fieldsTest = board.getFields();
         System.out.println(board);
-        System.out.println(board.toClasses());
-        System.out.println();
     }
     @Test
     void testClassEquals(){
@@ -19,6 +18,14 @@ class BoardTest {
         System.out.println(fieldsTest[3].getClass().equals(Chance.class));
         System.out.println(fieldsTest[2].getClass().equals(Amusement.class));
         System.out.println(fieldsTest[3].getClass().equals(Chance.class));
+
+
+        Player[] players = new Player[2];
+        players[0]= new Player("Freddy",1);
+        players[1]= new Player("Bo",2);
+        players[0].getMoney();
+        players[1].getMoney();
+
 
 
 
