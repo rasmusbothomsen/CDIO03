@@ -32,7 +32,7 @@ public class Player {
             this.money = money;
         }
 
-        public void addPoint(int point) {
+        public void addMoney(int point) {
             this.money += point;
         }
 
