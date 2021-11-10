@@ -2,7 +2,7 @@ package FieldHandling;
 
 import TurnHandling.Player;
 
-public class Object {
+public class Field {
     private String fieldName;
     private String fieldDiscription;
 
@@ -21,7 +21,7 @@ public class Object {
     private int placementOnBoard;
     private String type;
 
-    public Object(String fieldName, String fieldDiscription, int placementOnBoard) {
+    public Field(String fieldName, String fieldDiscription, int placementOnBoard) {
         this.fieldName = fieldName;
         this.fieldDiscription = fieldDiscription;
         this.placementOnBoard = placementOnBoard;
@@ -37,7 +37,7 @@ public class Object {
 
 
 
-class Amusement extends Object {
+class Amusement extends Field {
     private int cost;
     private Player playerwhoOwnsIt;
     private boolean isOwned;

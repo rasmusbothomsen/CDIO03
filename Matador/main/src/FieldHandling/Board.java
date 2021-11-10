@@ -10,7 +10,7 @@ public class Board {
     public String toString() {
         String boardDiscription="Fied  1: \t";
         for(int i =0;i<this.fields.length;i++){
-            boardDiscription+=this.fields[i].getFieldName();
+            boardDiscription+=((Field)this.fields[i]).getFieldName();
             if(i<this.fields.length-1) {
                 boardDiscription += "\nField " + (i + 2) + ":\t";
             }
@@ -23,7 +23,7 @@ public class Board {
         fillArrays();
     }
     private void fillArrays(){
-        this.fields=new Object[24];
+        this.fields=new Field[24];
         TextFileReader reader = new TextFileReader("FieldsText.txt");
         String[] readFiles = reader.fileReader();
         for(int i =0,a=0,b=0; i<readFiles.length;i++){
@@ -43,12 +43,12 @@ public class Board {
 
     }
     private void ifFieldToArray(int arrayToFill,String[] readFiles,int placementRead ) {
-        this.fields[arrayToFill]= new Object(readFiles[placementRead],readFiles[placementRead+1],placementRead);
+        this.fields[arrayToFill]= new Field(readFiles[placementRead],readFiles[placementRead+1],placementRead);
 
     }
 
     public Object[] getFields() {
-        return fields;
+        return this.fields;
     }
 
     private void ifAmusementToArray(int arrayToFill, String[] readFiles, int placementRead){
