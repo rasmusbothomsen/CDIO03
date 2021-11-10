@@ -1,10 +1,10 @@
 package FieldHandling;
 import TextReader.TextFileReader;
 
-import java.util.Arrays;
-
 public class Board {
-    private Field[] fields;
+
+
+    private Object[] fields;
 
     @Override
     public String toString() {
@@ -20,18 +20,15 @@ public class Board {
     }
 
     public Board() {
-        this.fields=fields;
         fillArrays();
     }
     private void fillArrays(){
-        fields=new Field[23];
+        this.fields=new Object[24];
         TextFileReader reader = new TextFileReader("FieldsText.txt");
         String[] readFiles = reader.fileReader();
-        int amoutOfAmusements=0;
-        for(int i =0,a=0; i<readFiles.length;i++){
+        for(int i =0,a=0,b=0; i<readFiles.length;i++){
             if(readFiles[i].startsWith("Amusement")){
-                amoutOfAmusements++;
-                ifAmusementToArray(a,readFiles,i+1,(amoutOfAmusements%2!=0));
+                ifAmusementToArray(a,readFiles,i+1);
                 a++;
             }
             if(readFiles[i].startsWith("Field")){
@@ -46,21 +43,19 @@ public class Board {
 
     }
     private void ifFieldToArray(int arrayToFill,String[] readFiles,int placementRead ) {
-        this.fields[arrayToFill]= new Field(readFiles[placementRead],readFiles[placementRead+1],placementRead);
+        this.fields[arrayToFill]= new Object(readFiles[placementRead],readFiles[placementRead+1],placementRead);
 
     }
 
-    public Field[] getFields() {
+    public Object[] getFields() {
         return fields;
     }
 
-    private void ifAmusementToArray(int arrayToFill, String[] readFiles, int placementRead, boolean isFirst){
-        if(isFirst) {
-            this.fields[arrayToFill] = new Amusement(readFiles[placementRead], readFiles[placementRead + 1], arrayToFill
-                    , Integer.parseInt(readFiles[placementRead + 2]), false, false);
-        } else{
-            this.fields[arrayToFill] = new Amusement(readFiles[placementRead], readFiles[placementRead + 1], arrayToFill
-                    , Integer.parseInt(readFiles[placementRead + 2]), false, false);
-        }
+    private void ifAmusementToArray(int arrayToFill, String[] readFiles, int placementRead){
+
+            this.fields[arrayToFill] = new Amusement(readFiles[placementRead], readFiles[placementRead + 1], arrayToFill, Integer.parseInt(readFiles[placementRead + 2]));
+
+
+
     }
 }

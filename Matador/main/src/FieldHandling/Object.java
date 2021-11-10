@@ -2,7 +2,7 @@ package FieldHandling;
 
 import TurnHandling.Player;
 
-public class Field {
+public class Object {
     private String fieldName;
     private String fieldDiscription;
 
@@ -19,44 +19,56 @@ public class Field {
     }
 
     private int placementOnBoard;
+    private String type;
 
-    public Field(String fieldName, String fieldDiscription, int placementOnBoard) {
+    public Object(String fieldName, String fieldDiscription, int placementOnBoard) {
         this.fieldName = fieldName;
         this.fieldDiscription = fieldDiscription;
         this.placementOnBoard = placementOnBoard;
     }
+
+
 }
 
 
-class Chance extends Field{
 
 
-    public Chance(String fieldName, String fieldDiscription, int placementOnBoard) {
-        super(fieldName, fieldDiscription, placementOnBoard);
-    }
-}
 
-class Amusement extends Field{
+
+
+
+class Amusement extends Object {
     private int cost;
     private Player playerwhoOwnsIt;
     private boolean isOwned;
     private boolean allIsOwned;
 
-    public void setSameType(Amusement sameType) {
-        this.sameType = sameType;
-    }
+
 
     private Amusement sameType;
 
-    public Amusement(String fieldName, String fieldDiscription, int placementOnBoard,
-                     int cost, boolean isOwned, boolean allIsOwned ) {
-        super(fieldName, fieldDiscription, placementOnBoard);
-        this.cost = cost;
-        this.isOwned = isOwned;
-        this.allIsOwned = allIsOwned;
+    @Override
+    public String toString() {
+        return "Amusement{" +
+                "cost=" + cost +
+                ", playerwhoOwnsIt=" + playerwhoOwnsIt +
+                ", isOwned=" + isOwned +
+                ", allIsOwned=" + allIsOwned +
+                ", sameType=" + sameType +
+                '}';
     }
 
+    public Amusement(String fieldName, String fieldDiscription, int placementOnBoard,
+                     int cost) {
+        super(fieldName, fieldDiscription, placementOnBoard);
+        this.cost = cost;
+        this.isOwned = false;
+        this.allIsOwned = false;
+    }
 
+    public void setSameType(Amusement sameType) {
+        this.sameType = sameType;
+    }
 
     public int getCost() {
         return cost;
@@ -82,25 +94,4 @@ class Amusement extends Field{
         return allIsOwned;
     }
 
-
-    class RestRoom extends Field{
-
-        public RestRoom(String fieldName, String fieldDiscription, int placementOnBoard) {
-            super(fieldName, fieldDiscription, placementOnBoard);
-        }
-    }
-
-    class GoToRestRoom extends Field{
-
-        public GoToRestRoom(String fieldName, String fieldDiscription, int placementOnBoard) {
-            super(fieldName, fieldDiscription, placementOnBoard);
-        }
-    }
-
-    class Start extends Field{
-
-        public Start(String fieldName, String fieldDiscription, int placementOnBoard) {
-            super(fieldName, fieldDiscription, placementOnBoard);
-        }
-    }
 }

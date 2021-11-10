@@ -74,6 +74,9 @@ Amusement 21
 zoo
 temp disc
 4
+Field 22
+Chance
+Du er landet på Chancen, træk nu et tilfældigt kort.
 Amusement 22
 Vandlandet
 temp disc
