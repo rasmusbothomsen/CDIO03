@@ -11,7 +11,8 @@ public class CardDeck {
     private ChanceCard[] cardDeck;
 
    public CardDeck(){
-       cardDeck=cardDeckFiller();
+       this.cardDeck=cardDeckFiller();
+       cardShuffler();
 
 
    }
@@ -30,7 +31,7 @@ public class CardDeck {
             if (cardsText[i].startsWith("Card")) {
                 a++;
             }
-            cards[i] = new ChanceCard(cardsText[a], cardsText[a + 1], i);
+            cards[i] = new ChanceCard(cardsText[a], cardsText[a + 1], i); // Virker ikke helt korrekt
 
         }
 
@@ -50,9 +51,9 @@ public class CardDeck {
         ChanceCard temp;
         for (int i = 0; i < cardDeck.length; i++) {
             int randomIndexSwap = rand.nextInt(cardDeck.length);
-            temp = cardDeck[randomIndexSwap];
-            cardDeck[randomIndexSwap] = cardDeck[i];
-            cardDeck[i] = temp;
+            temp = this.cardDeck[randomIndexSwap];
+            this.cardDeck[randomIndexSwap] = this.cardDeck[i];
+            this.cardDeck[i] = temp;
 
         }
 
