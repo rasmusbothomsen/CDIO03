@@ -11,7 +11,7 @@ class BoardTest {
         Object[] fieldsTest = board.getFields();
         System.out.println(board);
     }
-    //@Test
+    @Test
     void testClassEquals(){
         Board board = new Board();
         Object[] fieldsTest = board.getFields();
