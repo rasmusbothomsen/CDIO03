@@ -7,6 +7,10 @@ import gui_main.GUI;
 import java.awt.*;
 
 public class GUIcreator {
+    public static void main(String[] args) {
+        GUI gui = new GUI();
+
+    }
 
     public static GUI guiCreator() {
         Board board = new Board();
@@ -15,10 +19,10 @@ public class GUIcreator {
 return null;
     }
     private static GUI_Field[] fieldsCreator(Object[] fieldFromBoard){
-        GUI_Field[] guidFields = new GUI_Field[24];
+        GUI_Field[] guiFields = new GUI_Field[24];
         for (int i =0; i<fieldFromBoard.length;i++){
                 if(fieldFromBoard[i].getClass().equals(Amusement.class)){
-                    guidFields[i] = new GUI_Street(((Amusement)fieldFromBoard[i]).getFieldName(),((Amusement) fieldFromBoard[i]).getFieldDiscription(),"heh", Integer.toString(((Amusement) fieldFromBoard[i]).getCost()), Color.GRAY,Color.PINK );
+                    guiFields[i] = new GUI_Street(((Amusement)fieldFromBoard[i]).getFieldName(),((Amusement) fieldFromBoard[i]).getFieldDiscription(),"heh", Integer.toString(((Amusement) fieldFromBoard[i]).getCost()), Color.GRAY,Color.PINK );
                 }
             if(fieldFromBoard[i].getClass().equals(Chance.class)){
 
