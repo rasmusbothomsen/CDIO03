@@ -1,6 +1,8 @@
 package FieldHandling;
 
-import main.java.TurnHandling.Player;
+
+import TurnHandling.Player;
+
 
 public class FieldHandler {
     private CardDeck cardDeck;

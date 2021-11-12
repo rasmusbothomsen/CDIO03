@@ -1,10 +1,7 @@
-package FieldHandling;
-
-
-import main.java.FieldHandling.Board;
-import main.java.TurnHandling.Player;
-import main.java.FieldHandling.Amusement;
-import main.java.FieldHandling.Chance;
+import FieldHandling.Board;
+import TurnHandling.Player;
+import FieldHandling.Amusement;
+import FieldHandling.Chance;
 import org.junit.jupiter.api.Test;
 
 class BoardTest {
@@ -14,7 +11,7 @@ class BoardTest {
         Object[] fieldsTest = board.getFields();
         System.out.println(board);
     }
-    @Test
+    //@Test
     void testClassEquals(){
         Board board = new Board();
         Object[] fieldsTest = board.getFields();

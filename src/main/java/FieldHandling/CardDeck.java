@@ -1,6 +1,6 @@
 package FieldHandling;
 
-import TextReader.TextFileReader;
+import Controllers.TextFileReader;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -12,8 +12,8 @@ public class CardDeck {
     private int whereInDeck;
 
     public CardDeck(){
-        this.whereInDeck = 0;
-        this.cardDeck=cardDeckFiller();
+        whereInDeck = 0;
+        cardDeck=cardDeckFiller();
         cardShuffler();
 
 
@@ -66,9 +66,9 @@ public class CardDeck {
         ChanceCard temp;
         for (int i = 0; i < cardDeck.length; i++) {
             int randomIndexSwap = rand.nextInt(cardDeck.length);
-            temp = this.cardDeck[randomIndexSwap];
-            this.cardDeck[randomIndexSwap] = this.cardDeck[i];
-            this.cardDeck[i] = temp;
+            temp = cardDeck[randomIndexSwap];
+            cardDeck[randomIndexSwap] = cardDeck[i];
+            cardDeck[i] = temp;
 
         }
 

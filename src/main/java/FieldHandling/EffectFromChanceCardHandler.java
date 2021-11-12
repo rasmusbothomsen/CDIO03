@@ -1,7 +1,6 @@
 package FieldHandling;
 
-import main.java.TurnHandling.Player;
-
+import TurnHandling.Player;
 public class EffectFromChanceCardHandler {
     private Player player;
     public String[] applyEffectFromCard(Player player, ChanceCard card){

@@ -1,11 +1,9 @@
-package FieldHandling;
-
-import main.java.FieldHandling.CardDeck;
+import FieldHandling.CardDeck;
 import org.junit.jupiter.api.Test;
 
 class CardDeckTest {
 
-@Test
+    @Test
     void testReader(){
     CardDeck cardDeck = new CardDeck();
     System.out.println(cardDeck.toString());

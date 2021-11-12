@@ -1,6 +1,5 @@
 package FieldHandling;
 
-import main.java.TurnHandling.Player;
 
 public class Field {
     private String fieldName;
@@ -37,81 +36,3 @@ public class Field {
 
 
 
-class Amusement extends Field {
-    private int cost;
-    private Player playerwhoOwnsIt;
-    private boolean isOwned;
-    private boolean allIsOwned;
-
-
-
-    private Amusement sameType;
-
-    @Override
-    public String toString() {
-        return "Amusement{" +
-                "cost=" + cost +
-                ", playerwhoOwnsIt=" + playerwhoOwnsIt +
-                ", isOwned=" + isOwned +
-                ", allIsOwned=" + allIsOwned +
-                ", sameType=" + sameType +
-                '}';
-    }
-
-    public Amusement(String fieldName, String fieldDiscription, int placementOnBoard,
-                     int cost) {
-        super(fieldName, fieldDiscription, placementOnBoard);
-        this.cost = cost;
-        this.isOwned = false;
-        this.allIsOwned = false;
-    }
-
-    public void setSameType(Amusement sameType) {
-        this.sameType = sameType;
-    }
-
-    public int getCost() {
-        return cost;
-    }
-
-    public void setPlayerwhoOwnsIt(Player playerwhoOwnsIt) {
-        this.playerwhoOwnsIt = playerwhoOwnsIt;
-    }
-
-    public Player getPlayerwhoOwnsIt() {
-        return playerwhoOwnsIt;
-    }
-
-    public Amusement getSameType() {
-        return sameType;
-    }
-
-    public boolean isOwned() {
-        return isOwned;
-    }
-
-    public boolean isAllIsOwned() {
-        return allIsOwned;
-    }
-
-}
-
-class RestRoom extends Field{
-    private boolean goTo;
-
-    public boolean isGoTo() {
-        return goTo;
-    }
-
-    public RestRoom(String fieldName, String fieldDiscription, int placementOnBoard, boolean goTo) {
-        super(fieldName, fieldDiscription, placementOnBoard);
-        this.goTo=goTo;
-    }
-}
-
-class Chance extends Field{
-
-    public Chance(String fieldName, String fieldDiscription, int placementOnBoard) {
-        super(fieldName, fieldDiscription, placementOnBoard);
-    }
-}

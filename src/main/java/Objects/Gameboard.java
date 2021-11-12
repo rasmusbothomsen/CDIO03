@@ -1,5 +1,5 @@
 
-package main.java.Objects;
+package Objects;
 
 public class Gameboard {
 }

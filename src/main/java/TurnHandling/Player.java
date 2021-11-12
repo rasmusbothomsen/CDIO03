@@ -1,4 +1,4 @@
-package main.java.TurnHandling;
+package TurnHandling;
 
 public class Player {
         private final String name;
