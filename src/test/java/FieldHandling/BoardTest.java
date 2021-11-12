@@ -1,7 +1,10 @@
 package FieldHandling;
 
 
-import TurnHandling.Player;
+import main.java.FieldHandling.Board;
+import main.java.TurnHandling.Player;
+import main.java.FieldHandling.Amusement;
+import main.java.FieldHandling.Chance;
 import org.junit.jupiter.api.Test;
 
 class BoardTest {

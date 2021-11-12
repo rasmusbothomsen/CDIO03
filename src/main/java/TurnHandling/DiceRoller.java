@@ -1,5 +1,5 @@
-package TurnHandling;
-import Objects.Dice;
+package main.java.TurnHandling;
+import main.java.Objects.Dice;
 public class DiceRoller {
     private Dice dice;
 

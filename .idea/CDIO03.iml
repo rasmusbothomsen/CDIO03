@@ -5,7 +5,10 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/Matador/main/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Matador/test/TestSrc" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/Matador/main/src/TextReader" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/TextReader" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -42,6 +45,5 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="TextReader" level="project" />
   </component>
 </module>

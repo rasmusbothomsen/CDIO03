@@ -1,6 +1,6 @@
 package FieldHandling;
 
-import TurnHandling.Player;
+import main.java.TurnHandling.Player;
 
 public class Field {
     private String fieldName;

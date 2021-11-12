@@ -1,5 +1,4 @@
 package FieldHandling;
-import TextReader.TextFileReader;
 
 public class Board {
 
@@ -8,6 +7,7 @@ public class Board {
 
     @Override
     public String toString() {
+
         StringBuilder boardDiscription= new StringBuilder("Fied  1: \t");
         for(int i =0;i<this.fields.length;i++){
             boardDiscription.append(((Field) this.fields[i]).getFieldName());

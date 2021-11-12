@@ -1,8 +1,7 @@
 package FieldHandling;
 
+import main.java.FieldHandling.CardDeck;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CardDeckTest {
 

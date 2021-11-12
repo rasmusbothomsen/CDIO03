@@ -1,4 +1,4 @@
-package TurnHandling;
+package main.java.TurnHandling;
 
 
 public class playTurn {
