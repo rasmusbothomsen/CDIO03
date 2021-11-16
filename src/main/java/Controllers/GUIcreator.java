@@ -1,5 +1,6 @@
 package Controllers;
 import FieldHandling.*;
+import gui_codebehind.GUI_BoardController;
 import gui_fields.*;
 import gui_main.GUI;
 
@@ -7,7 +8,11 @@ import java.awt.*;
 
 public class GUIcreator {
     public static void main(String[] args) {
-        GUI gui = new GUI(guiCreator());
+        GUI_Field[] fields = guiCreator();
+        GUI gui = new GUI(fields);
+
+
+
     }
 
     public static GUI_Field[] guiCreator() {
@@ -21,7 +26,7 @@ public class GUIcreator {
         GUI_Field[] guiFields = new GUI_Field[24];
         for (int i =0; i<fieldFromBoard.length;i++){
                 if(fieldFromBoard[i].getClass().equals(Amusement.class)){
-                    guiFields[i] = new GUI_Street(((Amusement)fieldFromBoard[i]).getFieldName(),Integer.toString(((Amusement) fieldFromBoard[i]).getCost())+"$",
+                    guiFields[i] = new GUI_Street(((Amusement)fieldFromBoard[i]).getFieldName(),(((Amusement) fieldFromBoard[i]).getCost())+"$",
                             ((Amusement)fieldFromBoard[i]).getFieldDiscription(), Integer.toString(((Amusement) fieldFromBoard[i]).getCost()), Color.GRAY,Color.PINK );
                 }
             if(fieldFromBoard[i].getClass().equals(Chance.class)){
